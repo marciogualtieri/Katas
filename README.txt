@@ -4,3 +4,10 @@
 
 - Bowling Game
 - Prime Factors
+
++-------------------+
+| OTHER KATAS       |
++-------------------+
+
+- Set
+- Binary Tree
