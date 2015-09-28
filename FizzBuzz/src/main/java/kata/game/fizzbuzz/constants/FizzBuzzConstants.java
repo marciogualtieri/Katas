@@ -1,4 +1,4 @@
-package kata.game.fizzbuzz;
+package kata.game.fizzbuzz.constants;
 
 public class FizzBuzzConstants {
     public static final String FIZZ = "fizz";

@@ -1,5 +1,6 @@
 package kata.game.fizzbuzz;
 
+import kata.game.fizzbuzz.constants.FizzBuzzConstants;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,25 +23,25 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void whenNumberDivadableByThree_ThenFizz() throws Exception {
+    public void whenNumberIsDivadableByThree_ThenFizz() throws Exception {
         String result = testFizzBuzz.getResult(6);
         assertThat(result, equalTo(FizzBuzzConstants.FIZZ));
     }
 
     @Test
-    public void whenNumberDivadableByFive_ThenBuzz() throws Exception {
+    public void whenNumberIsDivadableByFive_ThenBuzz() throws Exception {
         String result = testFizzBuzz.getResult(10);
         assertThat(result, equalTo(FizzBuzzConstants.BUZZ));
     }
 
     @Test
-    public void whenNumberDivadableByThreeAndFive_ThenFizzBuzz() throws Exception {
+    public void whenNumberIsDivadableByThreeAndFive_ThenFizzBuzz() throws Exception {
         String result = testFizzBuzz.getResult(15);
         assertThat(result, equalTo(FizzBuzzConstants.FIZZBUZZ));
     }
 
     @Test
-    public void whenNumberNotDivadableByThreeOrFive_ThenGetNumberAsString() throws Exception {
+    public void whenNumberIsNotDivadableByThreeOrFive_ThenGetNumberAsString() throws Exception {
         int testNumber = 11;
         String result = testFizzBuzz.getResult(testNumber);
         assertThat(result, equalTo(Integer.toString(testNumber)));

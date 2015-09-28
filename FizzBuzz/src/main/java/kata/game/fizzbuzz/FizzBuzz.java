@@ -1,28 +1,14 @@
 package kata.game.fizzbuzz;
 
+import kata.game.fizzbuzz.checkers.Checker;
+import kata.game.fizzbuzz.checkers.impl.BuzzChecker;
+import kata.game.fizzbuzz.checkers.impl.FizzChecker;
+import kata.game.fizzbuzz.checkers.impl.NoneChecker;
+
 public class FizzBuzz {
     public String getResult(int number) {
-        if (isFizzBuzz(number)) {
-            return FizzBuzzConstants.FIZZBUZZ;
-        }
-        if (isFizz(number)) {
-            return FizzBuzzConstants.FIZZ;
-        }
-        if (isBuzz(number)) {
-            return FizzBuzzConstants.BUZZ;
-        }
-        return Integer.toString(number);
-    }
-
-    private boolean isFizz(int number) {
-        return number % 3 == 0;
-    }
-
-    private boolean isBuzz(int number) {
-        return number % 5 == 0;
-    }
-
-    private boolean isFizzBuzz(int number) {
-        return isFizz(number) && isBuzz(number);
+        StringBuffer resultBuffer = new StringBuffer();
+        Checker checker = new FizzChecker(new BuzzChecker(new NoneChecker(resultBuffer), resultBuffer), resultBuffer);
+        return checker.getResult(number);
     }
 }
