@@ -28,4 +28,12 @@ public class Node {
     public void setRightNode(Node rightNode) {
         this.rightNode = rightNode;
     }
+
+    public boolean isLeftNodeFree() {
+        return leftNode == null;
+    }
+
+    public boolean isRightNodeFree() {
+        return rightNode == null;
+    }
 }

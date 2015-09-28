@@ -1,5 +1,8 @@
 package kata.tree.binary;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinaryTree {
 
     private Node rootNode = null;
@@ -15,82 +18,81 @@ public class BinaryTree {
 
     private void insert(Node node, int value) {
         if (value > node.getValue()) {
-            if (node.getRightNode() == null) {
-                Node newNode = new Node(value);
-                node.setRightNode(newNode);
-            } else {
-                insert(node.getRightNode(), value);
-            }
+            insertIntoRightSide(node, value);
         } else {
-            if (node.getLeftNode() == null) {
-                Node newNode = new Node(value);
-                node.setLeftNode(newNode);
-            } else {
-                insert(node.getLeftNode(), value);
-            }
+            insertIntoTheLeftSide(node, value);
         }
     }
 
-    public String getTreeAsStringInPreOrder() {
-        StringBuffer treeAsStringBuffer = new StringBuffer();
-        buildTreeInPreOrder(rootNode, treeAsStringBuffer);
-        return treeAsStringBuffer.toString();
+    private void insertIntoRightSide(Node node, int value) {
+        if (node.isRightNodeFree()) {
+            node.setRightNode(new Node(value));
+        } else {
+            insert(node.getRightNode(), value);
+        }
     }
 
-    public String getTreeAsStringInPostOrder() {
-        StringBuffer treeAsStringBuffer = new StringBuffer();
-        buildTreeInPostOrder(rootNode, treeAsStringBuffer);
-        return treeAsStringBuffer.toString();
+    private void insertIntoTheLeftSide(Node node, int value) {
+        if (node.isLeftNodeFree()) {
+            node.setLeftNode(new Node(value));
+        } else {
+            insert(node.getLeftNode(), value);
+        }
     }
 
-    public String getTreeAsStringInOrder() {
-        StringBuffer treeAsStringBuffer = new StringBuffer();
-        buildTreeInOrder(rootNode, treeAsStringBuffer);
-        return treeAsStringBuffer.toString();
+    public List<Integer> getNodesInPreOrder() {
+        List<Integer> nodes = new ArrayList<>();
+        visitNodesInPreOrderAndAddThemToList(rootNode, nodes);
+        return nodes;
     }
 
-    public String getTreeAsStringInReverseOrder() {
-        StringBuffer treeAsStringBuffer = new StringBuffer();
-        buildTreeInReverseOrder(rootNode, treeAsStringBuffer);
-        return treeAsStringBuffer.toString();
+    public List<Integer> getNodesInPostOrder() {
+        List<Integer> nodes = new ArrayList<>();
+        visitNodesInPostOrderAndAddThemToList(rootNode, nodes);
+        return nodes;
     }
 
-    private void buildTreeInPreOrder(Node rootNode, StringBuffer treeAsStringBuffer) {
+    public List<Integer> getNodesInOrder() {
+        List<Integer> nodes = new ArrayList<>();
+        visitNodesInOrderAndAddThemToList(rootNode, nodes);
+        return nodes;
+    }
+
+    public List<Integer> getNodesInReverseOrder() {
+        List<Integer> nodes = new ArrayList<>();
+        visitNodesInReverseOrderAndAddThemToList(rootNode, nodes);
+        return nodes;
+    }
+
+    private void visitNodesInPreOrderAndAddThemToList(Node rootNode, List<Integer> nodes) {
         if (rootNode != null) {
-            appendToTreeAsStringBuffer(rootNode, treeAsStringBuffer);
-            buildTreeInPreOrder(rootNode.getLeftNode(), treeAsStringBuffer);
-            buildTreeInPreOrder(rootNode.getRightNode(), treeAsStringBuffer);
+            nodes.add(rootNode.getValue());
+            visitNodesInPreOrderAndAddThemToList(rootNode.getLeftNode(), nodes);
+            visitNodesInPreOrderAndAddThemToList(rootNode.getRightNode(), nodes);
         }
     }
 
-    private void buildTreeInPostOrder(Node rootNode, StringBuffer treeAsStringBuffer) {
+    private void visitNodesInPostOrderAndAddThemToList(Node rootNode, List<Integer> nodes) {
         if (rootNode != null) {
-            buildTreeInPostOrder(rootNode.getLeftNode(), treeAsStringBuffer);
-            buildTreeInPostOrder(rootNode.getRightNode(), treeAsStringBuffer);
-            appendToTreeAsStringBuffer(rootNode, treeAsStringBuffer);
+            visitNodesInPostOrderAndAddThemToList(rootNode.getLeftNode(), nodes);
+            visitNodesInPostOrderAndAddThemToList(rootNode.getRightNode(), nodes);
+            nodes.add(rootNode.getValue());
         }
     }
 
-    private void buildTreeInOrder(Node rootNode, StringBuffer treeAsStringBuffer) {
+    private void visitNodesInOrderAndAddThemToList(Node rootNode, List<Integer> nodes) {
         if (rootNode != null) {
-            buildTreeInOrder(rootNode.getLeftNode(), treeAsStringBuffer);
-            appendToTreeAsStringBuffer(rootNode, treeAsStringBuffer);
-            buildTreeInOrder(rootNode.getRightNode(), treeAsStringBuffer);
+            visitNodesInOrderAndAddThemToList(rootNode.getLeftNode(), nodes);
+            nodes.add(rootNode.getValue());
+            visitNodesInOrderAndAddThemToList(rootNode.getRightNode(), nodes);
         }
     }
 
-    private void buildTreeInReverseOrder(Node rootNode, StringBuffer treeAsStringBuffer) {
+    private void visitNodesInReverseOrderAndAddThemToList(Node rootNode, List<Integer> nodes) {
         if (rootNode != null) {
-            buildTreeInReverseOrder(rootNode.getRightNode(), treeAsStringBuffer);
-            appendToTreeAsStringBuffer(rootNode, treeAsStringBuffer);
-            buildTreeInReverseOrder(rootNode.getLeftNode(), treeAsStringBuffer);
+            visitNodesInReverseOrderAndAddThemToList(rootNode.getRightNode(), nodes);
+            nodes.add(rootNode.getValue());
+            visitNodesInReverseOrderAndAddThemToList(rootNode.getLeftNode(), nodes);
         }
-    }
-
-    private void appendToTreeAsStringBuffer(Node node, StringBuffer treeAsStringBuffer) {
-        if (treeAsStringBuffer.length() > 0) {
-            treeAsStringBuffer.append(SEPARATOR);
-        }
-        treeAsStringBuffer.append(node.getValue());
     }
 }
