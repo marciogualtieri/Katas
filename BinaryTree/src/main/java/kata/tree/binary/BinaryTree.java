@@ -13,7 +13,7 @@ public class BinaryTree {
         }
     }
 
-    public void insert(Node node, int value) {
+    private void insert(Node node, int value) {
         if (value > node.getValue()) {
             if (node.getRightNode() == null) {
                 Node newNode = new Node(value);
@@ -54,6 +54,7 @@ public class BinaryTree {
         buildTreeInReverseOrder(rootNode, treeAsStringBuffer);
         return treeAsStringBuffer.toString();
     }
+
     private void buildTreeInPreOrder(Node rootNode, StringBuffer treeAsStringBuffer) {
         if (rootNode != null) {
             appendToTreeAsStringBuffer(rootNode, treeAsStringBuffer);
