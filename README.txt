@@ -9,5 +9,6 @@
 | OTHER KATAS       |
 +-------------------+
 
-- Set
+- MyHashSet
 - Binary Tree
+- FizzBuzz
