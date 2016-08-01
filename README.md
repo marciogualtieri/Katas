@@ -25,5 +25,6 @@ Java projects:
 
 - MyHashSet
 - Binary Tree
-- FizzBuzz
-- QuickSort
+- Fizz Buzz
+- Quick Sort
+- Supermarket Pricing
