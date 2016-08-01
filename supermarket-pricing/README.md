@@ -281,7 +281,7 @@ But the spec doesn't allow the use of any frameworks (including ORM and REST).
 
 Note that I'm not checking for null anywhere. According to [clean code principles](https://cleancoders.com/), defensive
 programming is harmful and creates boilerplate code. Given that this is an internal API, one should trust that
-the API methods will be called with the proper parameters by members of your team.
+the API methods will be called with the proper parameters by members of the team.
 
 I'm validating parameters for `XForThePriceOfYOffer` (`X` needs to be greater than `Y`) for instance, as an incorrect
 configuration by an end-user could happen.
