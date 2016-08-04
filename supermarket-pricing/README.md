@@ -96,7 +96,7 @@ focused on modeling, so first of all follows a class diagram of my solution:
     class XForPrice implements PromotionalOffer {}
     )
 
-I would like to emphasize that I didn't come up with this diagram before I implemented the code. I applied 
+I would like to highlight that I didn't come up with this diagram before I implemented the code. I applied 
 [TDD](https://en.wikipedia.org/wiki/Test-driven_development) and iteratively refined the model, which has been shaped 
 by tests into its final form.
 
@@ -107,7 +107,7 @@ Follows also my comments on the requirements and questions raised by Dave:
 My model uses the [strategy pattern](https://en.wikipedia.org/wiki/Strategy_pattern) to implement different promotional 
 offers. The concrete implementation of `PromotionalOffer` named `XForPriceOffer` addresses this requirement.
 
-I believe that my design respect all [S.O.L.I.D principles](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)):
+I believe that my design respect all [S.O.L.I.D. principles](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)):
 
 * All my methods are small and only do one thing. Cyclomatic Complexity in my code is low (if one runs
 SonarQube, which I did using my own local SonarQube instance, more on that in the next section).
