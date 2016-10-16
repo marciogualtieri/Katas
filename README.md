@@ -23,7 +23,7 @@ Java projects:
 
 #### <a name="others"></a> OTHERS
 
-- MyHashSet
+- My Hash Set
 - Binary Tree
 - Fizz Buzz
 - Quick Sort
