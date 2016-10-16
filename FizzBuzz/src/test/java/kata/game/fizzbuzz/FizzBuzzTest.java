@@ -23,25 +23,25 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void whenNumberIsDivadableByThree_ThenFizz() throws Exception {
+    public void whenNumberIsDivisibleByThree_ThenFizz() throws Exception {
         String result = testFizzBuzz.getResult(6);
         assertThat(result, equalTo(FizzBuzzConstants.FIZZ));
     }
 
     @Test
-    public void whenNumberIsDivadableByFive_ThenBuzz() throws Exception {
+    public void whenNumberIsDivisibleByFive_ThenBuzz() throws Exception {
         String result = testFizzBuzz.getResult(10);
         assertThat(result, equalTo(FizzBuzzConstants.BUZZ));
     }
 
     @Test
-    public void whenNumberIsDivadableByThreeAndFive_ThenFizzBuzz() throws Exception {
+    public void whenNumberIsDivisibleByThreeAndFive_ThenFizzBuzz() throws Exception {
         String result = testFizzBuzz.getResult(15);
         assertThat(result, equalTo(FizzBuzzConstants.FIZZBUZZ));
     }
 
     @Test
-    public void whenNumberIsNotDivadableByThreeOrFive_ThenGetNumberAsString() throws Exception {
+    public void whenNumberIsNotDivisibleByThreeOrFive_ThenGetNumberAsString() throws Exception {
         int testNumber = 11;
         String result = testFizzBuzz.getResult(testNumber);
         assertThat(result, equalTo(Integer.toString(testNumber)));
