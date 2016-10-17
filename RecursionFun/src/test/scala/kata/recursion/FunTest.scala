@@ -41,8 +41,9 @@ class FunTest extends FlatSpec with Matchers with BeforeAndAfter with PrivateMet
     f(0) shouldBe 1
     f(1) shouldBe 1
     f(2) shouldBe 2
-    f(3) shouldBe 6
-    f(4) shouldBe 24
-    f(5) shouldBe 120
+    f(3) shouldBe 3
+    f(4) shouldBe 5
+    f(5) shouldBe 8
+    f(6) shouldBe 13
   }
 }
