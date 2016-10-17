@@ -27,7 +27,7 @@ class Fibonacci {
 }
 
 object Fibonacci {
-  def apply(): Factorial = new Factorial
+  def apply(): Fibonacci = new Fibonacci
 }
 
 

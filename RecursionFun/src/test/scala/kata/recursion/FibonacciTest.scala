@@ -5,15 +5,15 @@ import org.scalatest._
 class FibonacciTest extends FlatSpec with Matchers with BeforeAndAfter with PrivateMethodTester {
 
   "Recursive Fibonacci calls" should "be successful." in {
-    someFibonacciCalls(Factorial().recursiveFibonacci)
+    someFibonacciCalls(Fibonacci().recursiveFibonacci)
   }
 
   "Imperative Fibonacci calls" should "be successful." in {
-    someFibonacciCalls(Factorial().imperativeFibonacci)
+    someFibonacciCalls(Fibonacci().imperativeFibonacci)
   }
 
   "Tail Recursive Fibonacci calls" should "be successful." in {
-    someFibonacciCalls(Factorial().tailRecursiveFibonacci)
+    someFibonacciCalls(Fibonacci().tailRecursiveFibonacci)
   }
 
   def someFibonacciCalls(f: Int => Int) = {
