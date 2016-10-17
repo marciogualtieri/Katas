@@ -28,3 +28,4 @@ Java projects:
 - Fizz Buzz
 - Quick Sort
 - Supermarket Pricing
+- Recursion Fun
