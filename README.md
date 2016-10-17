@@ -18,14 +18,14 @@ Java projects:
 
 #### <a name="uncle-bobs"></a> UNCLE BOB'S
 
-- Bowling Game
-- Prime Factors
+- [Bowling Game](https://github.com/marciogualtieri/Katas/tree/master/BowlingGame)
+- [Prime Factors](https://github.com/marciogualtieri/Katas/tree/master/PrimeFactors)
 
 #### <a name="others"></a> OTHERS
 
-- My Hash Set
-- Binary Tree
-- Fizz Buzz
-- Quick Sort
-- Supermarket Pricing
-- Recursion Fun
+- [My Hash Set](https://github.com/marciogualtieri/Katas/tree/master/MyHashSet)
+- [Binary Tree](https://github.com/marciogualtieri/Katas/tree/master/BinaryTree)
+- [Fizz Buzz](https://github.com/marciogualtieri/Katas/tree/master/FizzBuzz)
+- [Quick Sort](https://github.com/marciogualtieri/Katas/tree/master/QuickSort)
+- [Supermarket Pricing](https://github.com/marciogualtieri/Katas/tree/master/SupermarketPricing)
+- [Recursion Fun](https://github.com/marciogualtieri/Katas/tree/master/RecursionFun)
