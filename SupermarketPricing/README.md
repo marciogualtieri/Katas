@@ -202,6 +202,10 @@ file named `SonarQube_-_supermarket-pricing.pdf` in the project root directory.
 
 Note that has no issues, duplication, etc, and the complexity is low. No package dependency cycles as well.
 
+To generate Jacoco reports:
+
+    mvn clean test jacoco:report
+
 ## <a name="rest-api"></a> REST API
 
 [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) could be implemented using REST to create the 
