@@ -2,7 +2,7 @@ package kata.recursion
 
 import org.scalatest._
 
-class FibonacciTest extends FlatSpec with Matchers with BeforeAndAfter with PrivateMethodTester {
+class FibonacciTest extends FlatSpec with Matchers with BeforeAndAfter {
 
   "Recursive Fibonacci calls" should "be successful." in {
     someFibonacciCalls(Fibonacci().recursiveFibonacci)

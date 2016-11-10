@@ -2,7 +2,7 @@ package kata.recursion
 
 import org.scalatest._
 
-class FactorialTest extends FlatSpec with Matchers with BeforeAndAfter with PrivateMethodTester {
+class FactorialTest extends FlatSpec with Matchers with BeforeAndAfter {
 
   "Recursive Factorial calls" should "be successful." in {
     someFactorialCalls(Factorial().recursiveFactorial)
