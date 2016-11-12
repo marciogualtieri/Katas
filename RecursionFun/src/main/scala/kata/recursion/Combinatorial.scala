@@ -9,7 +9,6 @@ class Combinatorial {
   }
 
   def choose[T](n: Int, k: Int): Int = {
-    println(s"n: [$n] k: [$k]")
     if (k > n) 0
     else if (k == 1) n
     else choose(n - 1, k - 1) + choose(n - 1, k)
