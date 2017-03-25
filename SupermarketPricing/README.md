@@ -18,7 +18,11 @@ To test and build the application, run the following command:
 Given the [instructions from Dave Thomas](http://codekata.com/kata/kata01-supermarket-pricing/), this kata is greatly 
 focused on modeling, so first of all follows a class diagram of my solution:
 
-![Supermarket Pricing Class Diagram](http://g.gravizo.com/g?
+
+![](https://g.gravizo.com/source/svg/custom_mark1?https%3A%2F%2Fraw.githubusercontent.com%2Fmarciogualtieri%2FKatas%2Fmaster%2FSupermarketPricing%2FREADME.md)
+
+<!---
+custom_mark1
     /**
     *@opt all
     */
@@ -94,7 +98,8 @@ focused on modeling, so first of all follows a class diagram of my solution:
     *@opt all
     */
     class XForPrice implements PromotionalOffer {}
-    )
+custom_mark1
+-->
 
 I would like to highlight that I didn't come up with this diagram before I implemented the code. I applied 
 [TDD](https://en.wikipedia.org/wiki/Test-driven_development) and iteratively refined the model, which has been shaped 
