@@ -4,7 +4,6 @@
 #### [Test & Build the Application](#test-and-build-the-application)
 #### [Modeling](#modeling)
 #### [Code Coverage](#code-coverage)
-#### [REST API](#rest-api)
 #### [Final Notes](#final-notes)
 
 ## <a name="test-and-build-the-application"></a> Test & Build the Application
@@ -210,81 +209,6 @@ Note that has no issues, duplication, etc, and the complexity is low. No package
 To generate Jacoco reports:
 
     mvn clean test jacoco:report
-
-## <a name="rest-api"></a> REST API
-
-[CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) could be implemented using REST to create the 
-product catalog:
-
-```Json
-POST catalog/product
-{ "product": 
-    { "description": "some product description",
-      "price": 1.23}
-    }
-}
-```
-
-Response:
-
-```Json
-{ "productId": 123 }
-201 (CREATED)
-```
-
-`POST` could be used for creating, `PUT` for updating, `GET` for selecting and `DELETE` for deleting products.
-
-We could create a basket history for a given customer, add purchases and then perform a checkout operation over the 
-resulting basket:
-
-```
-POST cashier/basket/create
-```
-
-Response:
-
-```Json
-{ "basketId": 1234567890 }
-201 (CREATED)
-```
-
-Add purchases to the basket:
-
-```Json
-POST cashier/basket/1234567890/purchase
-{ "productId": 123, "quantity": 1.23 }
-```
-
-Remove a purchase from the basket:
-
-```Json
-DELETE cashier/basket/1234567890/purchase/123
-```
-
-Checkout the basket:
-
-```
-POST cashier/basket/1234567890/checkout
-```
-
-Response:
-
-```Json
-{ "total": 12.34 }
-200 (OK)
-```
-
-Cancel the whole basket:
-
-```Json
-DELETE cashier/basket/1234567890
-200 (OK)
-```
-
-I guess I could implement this more or less easily using the [Play Framework](https://www.playframework.com/), even though
-I have only used Play with Scala (sample project available in my [GitHub account](https://github.com/marciogualtieri/person-service)).
-
-But the spec doesn't allow the use of any frameworks (including ORM and REST).
 
 ## <a name="final-notes"></a> Final Notes
 
