@@ -18,7 +18,7 @@ Given the [instructions from Dave Thomas](http://codekata.com/kata/kata01-superm
 focused on modeling, so first of all follows a class diagram of my solution:
 
 
-![](https://g.gravizo.com/source/svg/custom_mark1?https%3A%2F%2Fraw.githubusercontent.com%2Fmarciogualtieri%2FKatas%2Fmaster%2FSupermarketPricing%2FREADME.md)
+![](https://g.gravizo.com/source/custom_mark1?https%3A%2F%2Fraw.githubusercontent.com%2Fmarciogualtieri%2FKatas%2Fmaster%2FSupermarketPricing%2FJava%2FREADME.md)
 
 <!---
 custom_mark1
