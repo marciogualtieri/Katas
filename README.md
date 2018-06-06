@@ -27,6 +27,6 @@ Java projects:
 - [Binary Tree](https://github.com/marciogualtieri/Katas/tree/master/BinaryTree)
 - [Fizz Buzz](https://github.com/marciogualtieri/Katas/tree/master/FizzBuzz)
 - [Quick Sort](https://github.com/marciogualtieri/Katas/tree/master/QuickSort)
-- Merge Sort ([Java](https://github.com/marciogualtieri/Katas/tree/master/MergeSortJava), [Scala](https://github.com/marciogualtieri/Katas/tree/master/MergeSortScala))
+- [Mege Sort](https://github.com/marciogualtieri/Katas/tree/master/MergeSort)
 - [Supermarket Pricing](https://github.com/marciogualtieri/Katas/tree/master/SupermarketPricing)
 - [Recursion Fun](https://github.com/marciogualtieri/Katas/tree/master/RecursionFun)
