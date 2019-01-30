@@ -14,6 +14,10 @@ Java projects:
 
     $ mvn test
 
+Golang projects:
+
+    $ go test
+
 ### <a name="katas"></a> KATAS
 
 #### <a name="uncle-bobs"></a> UNCLE BOB'S
@@ -30,3 +34,4 @@ Java projects:
 - [Mege Sort](https://github.com/marciogualtieri/Katas/tree/master/MergeSort)
 - [Supermarket Pricing](https://github.com/marciogualtieri/Katas/tree/master/SupermarketPricing)
 - [Recursion Fun](https://github.com/marciogualtieri/Katas/tree/master/RecursionFun)
+- [Student Quiz](https://github.com/marciogualtieri/Katas/tree/master/StudentQuiz)

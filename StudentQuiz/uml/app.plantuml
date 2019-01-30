@@ -1,0 +1,88 @@
+@startuml
+
+note top of Teacher : Assumption: Grade is the mean of all quizzes and have equal weight.
+
+class Teacher {
+  + String name
+  + Int number
+  + Iteration[] iterations
+  + Quiz create_quiz(String description, Iteration iteration)
+  + void assign_quiz_to_student(Quiz quiz, Student student)
+  + Dict[Student, Float] grade_all_students(Iteration iteration)
+}
+
+class Student {
+  + String name
+  + Int number
+  + Quiz[] quizzes
+  + Dict[Question, Option] answers
+  + Iteration[] iterations
+  + void answer_question(Question question, Option option)
+  + void enrol_to_course_iteration(Iteration iteration):
+}
+
+note top of Course
+In the specification, "class" seems to implicitly refer to a "class iteration".
+I decided to explicitly use "Iteration" to refer to an iteration of a class instead.
+(I use "course" instead of "class", by the way, since "class" is a reserved keyword
+ in Python).
+end note
+
+class Course {
+  + String name
+  + Int number
+}
+
+note top of Iteration : Assumption: Single teacher per class/course iteration.
+
+class Iteration {
+  + Course course
+  + Teacher teacher
+  + Int year
+  + Semester semester
+  + Student[] students
+}
+
+enum Semester {
+  FALL
+  SPRING
+}
+
+note top of Quiz : Assumption: All questions have the same weight regarding grade.
+
+class Quiz {
+  + String description
+  + Iteration iteration
+  - Question[] questions
+  + Float grade()
+}
+
+class Question {
+  + String description
+  + Option[] options
+  + Option answer
+  + Quiz quiz
+}
+
+class Option {
+  + String description
+}
+
+Iteration "1..*" o-- "1" Course
+
+Teacher "1" o-- "1..*" Iteration
+Iteration o-- Teacher
+
+Student "1..0" o-- "1..*" Iteration
+Iteration "1..*" o-- "1..*" Student
+
+Quiz "1" o-- "1..*" Question
+Question o-- Quiz
+
+Question "1" o-- "1..*" Option
+
+Student "1..*" o-- "1..*" Quiz
+
+Iteration o-- Semester
+
+@enduml
