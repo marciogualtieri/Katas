@@ -163,7 +163,7 @@ You should get an output similar to the following:
     48 steps passed, 0 failed, 0 skipped, 0 undefined
     Took 0m0.017s
 
-Gherkin scenarios are available under the [features folder](./features)
+Gherkin scenarios are available under the [features folder](./features).
 
 ## Coverage Reports
 
