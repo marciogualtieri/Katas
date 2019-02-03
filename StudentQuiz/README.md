@@ -82,7 +82,7 @@ You should get an output similar to the following:
 
     OK
 
-Unit tests are available under the [tests folder](./test)
+Unit tests are available under the [tests folder](./test).
 
 ## Running Gherkin Scenarios
 
